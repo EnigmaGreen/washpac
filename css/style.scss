@@ -1,0 +1,28 @@
+---
+---
+.header {
+    .nav-item {
+        border-right: 1px solid #ddd;
+    }
+    .nav-item:last-of-type {
+        border-right: initial;
+    }
+
+    .navbar-collapse.show {
+        .nav-item {
+            border-bottom: 1px solid #ddd;
+            border-right: initial;
+        }
+        .nav-item:last-of-type {
+            border-bottom: initial;
+        }
+    }
+}
+
+.homecarousel {
+    .carousel-item img {
+        object-fit: cover;
+        min-height: 400px;
+        max-height: 500px;
+    }
+}

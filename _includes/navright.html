@@ -1,0 +1,8 @@
+<ul class="navbar-nav">
+{% assign sorted_pages = site.pages | where:"nav", "right" | sort: "navsort" %}
+{% for p in sorted_pages %}
+<li class="nav-item {{p.css}} px-3 py-2 px-sm-5">
+  <a class="nav-link" href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+</li>
+{% endfor %}
+</ul>
