@@ -1,0 +1,12 @@
+---
+---
+[
+  {% assign sorted_pages = site.pages | where:"searchable", "true" | sort: "sort" %}
+  {% for p in site.pages %}
+    {
+      "title"    : "{{ p.seotitle }}",
+      "url"      : "{{ site.baseurl }}{{ p.url }}",
+      "description" : "{{ p.seodescription | strip_html | strip_newlines | escape }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

@@ -20,9 +20,14 @@
 }
 
 .homecarousel {
-    .carousel-item img {
+    .carousel-item {
+        .carousel-caption {
+            background: rgba(0,0,0,0.7);
+        }
+        
+        img {
         object-fit: cover;
         min-height: 400px;
         max-height: 500px;
-    }
+    }}
 }

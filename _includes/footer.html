@@ -2,7 +2,7 @@
     <div class="container p-5 footer">
         <div class="row g-0">
             <div class="col-sm-12 col-md-3 text-center text-sm-center text-md-start g-0">
-                <p class="py-3 footerlogo"><img src="{{site.baseurl}}/images/LOGO1b1.png"></p>
+                <p class="py-3 footerlogo"><img src="{{site.baseurl}}/images/footerlogo.png" width="100px"></p>
             </div>
             <div class="row col-sm-6 col-md-6 text-center text-md-start g-0 pb-3">
                 <p class="text-uppercase fw-bold py-3">Quick Links</p>
@@ -13,7 +13,7 @@
                         {% for p in sorted_pages %}
                             <li class="nav-item"><a class="nav-link py-1" href="{{ site.baseurl }}{{ p.url }}">{{p.title}}</a></li>
                         {% endfor %}
-                        {% assign sorted_pages = site.pages | where:"type", "navright" | sort: "sort" %}
+                        {% assign sorted_pages = site.pages | where:"nav", "right" | sort: "sort" %}
                         {% for p in sorted_pages %}
                             <li class="nav-item"><a class="nav-link py-1" href="{{ site.baseurl }}{{ p.url }}">{{p.title}}</a></li>
                         {% endfor %}
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-md-6 g-0">
                     <ul class="navbar-nav">                    
-                        {% assign sorted_pages = site.pages | where:"type", "applications" | sort: "sort" %}
+                        {% assign sorted_pages = site.pages | where:"type", "product" | sort: "sort" %}
                         {% for p in sorted_pages %}
                             <li class="nav-item"><a class="nav-link py-1" href="{{ site.baseurl }}{{ p.url }}">{{p.title}}</a></li>
                         {% endfor %}
